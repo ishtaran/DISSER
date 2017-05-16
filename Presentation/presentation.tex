@@ -1,0 +1,274 @@
+\documentclass[14pt]{beamer}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amssymb,amsfonts,amsmath,mathtext}
+\usepackage{cite,enumerate,float,indentfirst}
+\usepackage{longtable}  
+\graphicspath{{../assets/}{images/}} 
+
+\usetheme{Pittsburgh}
+\usecolortheme{whale}
+
+\setbeamercolor{footline}{fg=blue}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
+    А. С. Тощев, К(П)ФУ
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
+    Казань, 2015
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{}%
+  Стр. \insertframenumber{} из \inserttotalframenumber \hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\newcommand{\itemi}{\item[\checkmark]}
+
+\title{\small{Интеллектуальная система повышения эффективности IT службы предприятия}}
+\author{\small{%
+\emph{Выступающий:} А.C. Тощев\\%
+\emph{Руководитель:} проф., д.ф.-м.н. А.М.Елизаров}\\%
+\vspace{30pt}%
+Казанский (Приволжский)\\
+федеральный университет%
+\vspace{20pt}%
+}
+\date{\small{Казань, 2015}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+\frametitle{Термины и обозначения}
+\begin{enumerate}
+    \item ITIL общепринятая методология в области поддержки IT
+    \item Инцидент - проблема, возникшая в результате работы ПО и приведшая к полной или частичной невозможности работы
+    \item TSS1 - системный администратор 3 категории
+    \item TU - инт
+  
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Цели и задачи}
+\begin{itemize}
+  \item \textbf{Предмет исследования} процесс регистрации и устранения проблемных ситуаций, возникающих в IT-инфраструктуре предприятия 
+  \item \textbf{Цель исследования}  разработка интеллектуальной системы повышения эффективности деятельности IT-службы предприятия
+  \item \textbf{Актуальность} определяется потребностью предприятий IT-отрасли в интеллектуальных системах, повышающих эффективность служб, поддерживающих IT-инфраструктуру этих предприятий
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Цели и задачи}
+\begin{itemize}
+    \item \textbf{Область исследования} разработка методов и алгоритмов решения задач системного анализа, оптимизации, управления, принятия решений и обработки информации в IT-отрасли %сузить
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Структура диссертации}
+\begin{enumerate}
+  \item \textbf{Глава 1. Обзор существуюших решений}
+  \begin{itemize}
+    \item Сравнительный анализ систем
+    \item Необходимые критерии системы
+    \item Сравнительный анализ средств NLP
+    \item Выводы
+  \end{itemize}
+  \item \textbf{Глава 2. Создание модели системы}
+  \begin{itemize}
+    \item Модель Menta 0.1
+    \item Модель Menta 0.3
+    \item Модель TU 1.0
+    \item Выводы
+  \end{itemize}
+  \item \textbf{Глава 3. Реализация модели системы}
+  \begin{itemize}
+    \item Архитектура системы
+    \item Модель данных TU Knowledge
+    \item Прототип системы
+    \item Выводы
+  \end{itemize}
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Структура диссертации}
+\begin{enumerate}
+ \item \textbf{Глава 4. Экспериментальные исследования}
+  \begin{itemize}
+    \item Экспериментальные данные
+    \item Оценка эффективности
+    \item Результаты экспериментов
+  \end{itemize}
+
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Категории инцидентов}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {EngineerTasks}
+  \label{img:EngineerTasks}  
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Анализ и определение области исследования}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.7] {ITSMTeamComposition}
+  \label{img:ITSMTeamComposition}  
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Обзор существуюших решений}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+
+\hline
+\textbf{Пункт} & HP Open View & Service NOW & IBM Watson & TU\\
+\hline
+   Мониторинг & Да & Да & Да & Нет \\
+   \hline
+   Регистрация инцидентов & Да & Да & Да & Нет\\
+   \hline
+   Управление системами & Да & Нет & Нет & Нет \\
+   \hline 
+   Создание цепи обработки & Да & Да & Нет & Да \\
+   \hline 
+   Запросы на естественном языке & Нет & Нет & Да & Да\\
+   \hline 
+   Поиск решений & Нет & Нет & Да & Да\\
+   \hline 
+   Применение решений & Нет & Нет & Нет & Да \\
+   \hline
+   Обучение & Нет & Нет & Нет & Да \\
+   \hline
+   Логические рассуждения & Нет & Нет & Нет & Да \\
+   \hline
+  
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Модель мышления TU}
+	\begin{itemize}
+		\item  Модель мышления 6-ти Марвина Мински.
+	\end{itemize}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {CSW_EX}
+  \caption{Критик-Селектор-Путь мышления в разрезе ресурсов} 
+  \label{img:csw_ex} 
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Реализация модели}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.15] {LifecycleActivity}
+  \caption{Диаграмма действий LifecycleActivity} 
+  \label{img:LifecycleActivity}  
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Результаты работы}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{8cm}|p{1cm}|p{1cm}|}
+
+\hline
+\textbf{Запрос} & TSS1 & TU \\
+\hline
+  Tense is kind of concept. & 15000 & 385 \\
+  
+  \hline
+  Please install Firefox.  & 9000 & 859 \\
+  \hline
+  Browser is an object.   & 20000 & 400 \\
+  \hline
+  Firefox is a browser.   & 5000 & 659  \\
+  \hline
+  Install is an action.    & 8000 & 486 \\
+  \hline
+  User miss Internet Explorer 8.     & 10000 & 10589 \\
+  \hline
+  User needs document portal update.    & 15000 & 16543 \\
+  \hline
+  Add new alias Host name on host that alias is wanted to: hrportal.lalala.biz IP adress on host that alias is wanted to: 322.223.333.22 Wanted Alias:    webadviser.lalala.net    & 10000 & 18432  \\ 
+  \hline
+  PP2C - Cisco IP communicator. Please see if you can fix the problem with the <...> & 13000 & 12343 \\ 
+   \hline
+   \end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Результаты работы}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{8cm}|p{2cm}|}
+
+\hline
+\textbf{Категория} & \textbf{Описание} \\
+\hline
+ Проблема с ПО    & 64\% \\
+ \hline Проблемы во время работы  &  10\% \\
+  \hline Как сделать & 40\% \\
+   \hline
+Проблема с оборудованием  & 0\% \\
+ \hline
+Установить новое ПО       & 100\% \\
+ \hline Проблема с печатью        & 80\% \\
+  \hline Нет доступа               & 100\% \\
+  \hline
+   \end{tabular}
+\end{table}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Основные результаты работы}
+\begin{itemize}
+   \item Была создана модель проблемно-ориентированной системы управления, принятия решений в области обслуживания информационной структуры предприятия на основе модели мышления
+  \item Была представлена новая модель данных для модели мышления и оригинальный способ ее хранения, эффективный по сравнению с другими базами данных
+  \item Было выполнено оригинальное исследование моделей мышления в области обслуживания информационной структуры предприятия
+  
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\begin{center}
+Спасибо за внимание!
+\end{center}
+\end{frame}
+
+\end{document} 

@@ -1,0 +1,85 @@
+Product;Module;Problem type;Description;Problem type
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;C3PNG TEAMCENTER;CANNOT ACCESS;User gets Invalid Login when trying to logon to Teamcenter. He has got a new password and changed it on the new CDSID page but it still does not work. Name: NILSSON, STEFANCDSID: snilsso9 Phone: 46-31-3257619Loaction: VCPVEmail: snilsso9@volvocars.comService Tag: 1F9MC3J;"class = Invalid Login,
+login = snilsso9,
+application = Teamcenter,"
+BUSINESS APPLICATIONS\TAILORED\WORKSTATION;LAPTOP OFFICE - SE;CANNOT ACCESS;"Problems with 3G modems after migration: ""Mobile connection not possible. Ensure that no other programs are using your selected device, and try again in a short while"" The user is a agent working at the UK helpdesk, please see the email attached to this ticket for more info.";"class = Connectivity,
+device = 3G modem,
+precondition = after migration,"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;WINDOWS;SOFTWARE PROBLEM;"User is missing ""Outlook pst file backup"" icon on her desktop";"class = Can not find,
+object = ""Outlook pst file backup"",
+objectType = icon"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;OTHER;CHANGE REQUEST;User has been on a trip and is now back, please install the application now. Software: Adobe Photoshop(CS3);"class = Reinstall software{
+application = class application{
+context = Software,
+value = Adobe Photoshop(CS3)
+}
+}"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;LAB95;SOFTWARE PROBLEM;See attachment for error message. LAB95 - Provning rekveo planeringPlease assist user, and investigate!Name: MATHIAS LORENTZONCDSID: MLORENT1Phone: 46-31-591522Location:  VCVAKEmail: mlorent1@volvocars.comService Tag: JGNPH3J - Vista.Migrated to vccnet (Y/N): N/Y;
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;OTHER;CANNOT ACCESS;User had received wrong application. User has ordered Wordfinder Business Economical for her service tag 7Q4TC3J, there is completed order in LOT with number ITCOORD-18125. However she received wrong version, she received Wordfinder Tehcnical instead of Business Economical. Please assist;"class Wrong application has been installed {
+installedApplication = class application{
+context = ordered instead,
+value =   Wordfinder Business Economical
+}
+applicationToInstall = class application{
+context = received,
+value = Wordfinder Tehcnical,
+}
+}"
+BUSINESS APPLICATIONS\TAILORED\WORKSTATION;LAPTOP OFFICE - SE;SOFTWARE PROBLEM;Laptop - user has almost full C:\ but when he looks in the properties of the files and folders on C:\ they are only 40GB and he has a 55GB driveName: MELLDEN;"class = Insufficient disk space{
+drive = c,
+class driveName{
+context = driveName,
+value = MELLDEN
+}
+}"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;PRODUCT MANAGER;SOFTWARE PROBLEM;User cannot find Produkt Manageron start meny please reinstall ;"class = Reinstall software,
+application =  Produkt Manageron"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;OTHER;CANNOT ACCESS;User needs to have pdf 995 re-installed please.;"class Reinstall software,
+application = PDF"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;OTHER;CHANGE REQUEST;Failed LOT OrderReciever: Sara EhingerCDSID: SEHINGER46-31-3255909Order Name: ITCOORD-19806Software: Lotus Notes Client(6.5.5)Service Tag: 2xwvxn1 (office)Order Name:ITCOORD-19806Software: Sony Ericsson PC Suite(6.007.00 for Naite, G502, K530i & K610i)Service Tag:2xwvxn1 (office)Order Name:ITCOORD-19806Software: Quicktime(7.1.6)Service Tag: 2xwvxn1 (office)Order Name:ITCOORD-19806Software: Adobe Illustrator(CS3)Service Tag:2xwvxn1 (office);
+BUSINESS APPLICATIONS\TAILORED\MISC;MISC - SE;CHANGE REQUEST;Hi NAS Admin,Please connect following groups to the shared disk listed below and configure security permissions. AD-GROUPS: 9413-SHR-VCC55101-R9413-SHR-VCC55101-AR Shared DISK: \\gbw9061117\proj\9413-shr-vcc55100\88625_Fire_Protection-VCC55101 ;"class Shared disk group connection{
+class group{
+context = AD-GROUPS:,
+value = 9413-SHR-VCC55101-R9413-SHR-VCC55101-AR
+}
+class disk{
+context = Shared DISK:,
+value = \\gbw9061117\proj\9413-shr-vcc55100\88625_Fire_Protection-VCC55101 
+}"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;ADOBE;SOFTWARE PROBLEM;Service affected: I can't open any files with *.pdf extensions. Problem description: My PC haven't Adobe Reader. ;"class Reinstall software,
+application = Adobe Reader"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;OUTLOOK;SOFTWARE PROBLEM;When user get a calendar invite for a later date/time, it's put in instantly to current time/date into the calendar .Can you please assist? ;"class Application problem, 
+application = Outlook,
+problem = invitation calendar date/time"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;OTHER;CANNOT ACCESS;thesame access like IM3410087Name:Willy George KuruvillaCDSID:WKURUVILPhone:46-31-590000Location:Email:mailto:wkuruvil@volvocars.comService Tag:72RG83JMigrated to vccnet (Y/N):;
+BUSINESS APPLICATIONS\TAILORED\MISC;MISC - SE;CHANGE REQUEST;Hi NAS Admin,Please connect following groups to the shared disk listed below and configure security permissions. AD-GROUPS: 9413-SHR-VCC46701-S19413-SHR-VCC46701-AR9413-SHR-VCC46701-R Shared DISK: \\gbw9061110\proj\9413-shr-vcc46700\Managment_Team-VCC46701;"class Shared disk group connection{
+class group{
+context = AD-GROUPS:,
+value =  9413-SHR-VCC46701-S19413-SHR-VCC46701-AR9413-SHR-VCC46701-R 
+}
+class disk{
+context = Shared DISK:,
+value = \\gbw9061110\proj\9413-shr-vcc46700\Managment_Team-VCC46701
+}"
+BUSINESS APPLICATIONS\TAILORED\NETWORK;OFFICE WLAN - SE;HOW TO;User is unable to do the WI-Fi changes herself on ner migrated PC. Name: GOBEL, PETRA;class Setup Wi-Fi, machine = GOBEL, PETRA
+BUSINESS APPLICATIONS\TAILORED\MISC;MISC - SE;CHANGE REQUEST;Hi NAS Admin, Please connect following groups to the shared disk listed below and configure security permissions. AD-GROUPS: 9413-SHR-vcc55100-AR9413-SHR-vcc55100-R Shared DISK: \\gbw9061117\proj\9413-shr-vcc55100;"class Shared disk group connection{
+class group{
+context = AD-GROUPS,
+value =  9413-SHR-vcc55100-AR9413-SHR-vcc55100-R
+}
+class disk{
+context = Shared DISK:,
+value = \\gbw9061117\proj\9413-shr-vcc55100
+}"
+BUSINESS APPLICATIONS\TAILORED\APPLICATION - SE;OTHER;SOFTWARE PROBLEM;User cant find application;"class = Can not find,
+object = 
+objectType = "
+BUSINESS APPLICATIONS\TAILORED\MISC;MISC - SE;CHANGE REQUEST;Hi NAS Admin,Please connect following groups to the shared disk listed below and configure security permissions. AD-GROUPS: 9413-SHR-VCC40600-AR9413-SHR-VCC40600-R Shared DISK: \\gbw9061104\proj\9413-shr-vcc40600;"class Shared disk group connection{
+class group{
+context = AD-GROUPS,
+value =   9413-SHR-VCC40600-AR9413-SHR-VCC40600-R
+}
+class disk{
+context = Shared DISK:,
+value = \\gbw9061104\proj\9413-shr-vcc40600
+}"
